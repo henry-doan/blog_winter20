@@ -1,2 +1,8 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>All page</h1>
+<% @pages.each do |page| %>
+  <%= page.title %>
+  <%= link_to 'Show Page', page_path(page) %>
+<% end %>
+
+<br />
+<%= link_to 'New Page Form', new_page_path %>
